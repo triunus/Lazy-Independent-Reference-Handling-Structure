@@ -138,13 +138,13 @@ MonoBehaviour:
   myUnitData:
     UnitID: 11
     UnitType: 1
-    HP: 0
-    BaseAttackPower: 0
-    AttackPowerModifier: 0
-    AttackPowerTakenModifier: 0
-    BaseHealPower: 0
-    HealPowerModifier: 0
-    HealPowerTakenModifier: 0
+    HP: 10
+    BaseAttackPower: 2.5
+    AttackPowerModifier: 0.5
+    AttackPowerTakenModifier: -0.5
+    BaseHealPower: 2
+    HealPowerModifier: 0.5
+    HealPowerTakenModifier: 0.5
 --- !u!114 &481163252768244734
 MonoBehaviour:
   m_ObjectHideFlags: 0

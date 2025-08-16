@@ -17,8 +17,8 @@ namespace GameSystem
         private IEnumerator OperateTestCaseInitialSettingFlow_Coroutine()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UnitSystemHandler = HandlerManager.GetDynamicDataHandler<UnitSystem.UnitSystemHandler>();
-            var UIUXHandler = HandlerManager.GetDynamicDataHandler<UIUXSystem.UIUXHandler>();
+            var UnitSystemHandler = HandlerManager.GetDynamicHandler<UnitSystem.UnitSystemHandler>();
+            var UIUXHandler = HandlerManager.GetDynamicHandler<UIUXSystem.UIUXHandler>();
 
             yield return this.StartCoroutine(UnitSystemHandler.IPlayerSpawner.SpawnPlayerUnit(this.StageID));
             yield return this.StartCoroutine(UnitSystemHandler.IEnemySpawner.SpawnEnemyUnit(this.StageID));

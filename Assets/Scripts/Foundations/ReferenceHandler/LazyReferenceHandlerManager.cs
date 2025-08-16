@@ -13,22 +13,19 @@ namespace Foundations.ReferencesHandler
         /// <summary>
         /// 외부 생성 차단용 기본 생성자.
         /// </summary>
-        protected LazyReferenceHandlerManager() { }
-
-        // Singleton에서 호출함.
-        protected override void OnInitialize()
+        protected LazyReferenceHandlerManager()
         {
             this.StaticLazyReferenceHandlerGroup = new();
             this.DynamicLazyReferenceHandlerGroup = new();
             this.UtilityLazyReferenceHandlerGroup = new();
         }
 
-        public T GetStaticDataHandler<T>() where T : IStaticReferenceHandler, new()
+        public T GetStaticHandler<T>() where T : IStaticReferenceHandler, new()
         {
             return StaticLazyReferenceHandlerGroup.GetOrCreate<T>();
         }
 
-        public T GetDynamicDataHandler<T>() where T : IDynamicReferenceHandler, new()
+        public T GetDynamicHandler<T>() where T : IDynamicReferenceHandler, new()
         {
             return DynamicLazyReferenceHandlerGroup.GetOrCreate<T>();
         }

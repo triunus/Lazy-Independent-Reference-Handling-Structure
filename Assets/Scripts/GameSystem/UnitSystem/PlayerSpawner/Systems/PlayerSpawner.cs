@@ -22,10 +22,10 @@ namespace GameSystem.UnitSystem.PlayerSpawner
         private void Awake()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            this.PlayerSpawnDBHandler = HandlerManager.GetStaticDataHandler<PlayerSpawnDBHandler>();
-            this.PlayerUnitDBHandler = HandlerManager.GetStaticDataHandler<PlayerUnitDBHandler>();
+            this.PlayerSpawnDBHandler = HandlerManager.GetStaticHandler<PlayerSpawnDBHandler>();
+            this.PlayerUnitDBHandler = HandlerManager.GetStaticHandler<PlayerUnitDBHandler>();
 
-            HandlerManager.GetDynamicDataHandler<UnitSystemHandler>().IPlayerSpawner = this;
+            HandlerManager.GetDynamicHandler<UnitSystemHandler>().IPlayerSpawner = this;
         }
 
         // 유닛 생성 작업.

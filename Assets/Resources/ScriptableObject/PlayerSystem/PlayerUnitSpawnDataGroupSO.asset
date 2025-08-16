@@ -17,3 +17,11 @@ MonoBehaviour:
     UnitSpawnDatas:
     - UnitID: 0
       SpawnPosition: {x: 4, y: -2, z: 0}
+  - StageID: 1
+    UnitSpawnDatas:
+    - UnitID: 0
+      SpawnPosition: {x: 3, y: -1, z: 0}
+    - UnitID: 1
+      SpawnPosition: {x: 4, y: -2, z: 0}
+    - UnitID: 2
+      SpawnPosition: {x: 3, y: -3, z: 0}

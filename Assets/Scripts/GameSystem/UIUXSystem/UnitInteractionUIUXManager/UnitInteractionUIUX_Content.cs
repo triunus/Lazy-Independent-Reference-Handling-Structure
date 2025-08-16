@@ -28,8 +28,8 @@ namespace GameSystem.UIUXSystem.UnitInteractionUIUX
         private void Awake()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            this.PlayerUnitDBHandler = HandlerManager.GetStaticDataHandler<UnitSystem.PlayerSpawner.PlayerUnitDBHandler>();
-            this.EnemyUnitDBHandler = HandlerManager.GetStaticDataHandler<UnitSystem.EnemySpawner.EnemyUnitDBHandler>();
+            this.PlayerUnitDBHandler = HandlerManager.GetStaticHandler<UnitSystem.PlayerSpawner.PlayerUnitDBHandler>();
+            this.EnemyUnitDBHandler = HandlerManager.GetStaticHandler<UnitSystem.EnemySpawner.EnemyUnitDBHandler>();
         }
 
         public void InitialSetting(UnitInteractionUIUXData unitInteractionUIUXData)

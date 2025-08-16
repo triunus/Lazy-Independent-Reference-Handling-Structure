@@ -32,7 +32,7 @@ namespace GameSystem.UIUXSystem.UnitStatUIUX
         private void Awake()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UIUXHandler = HandlerManager.GetDynamicDataHandler<UIUXHandler>();
+            var UIUXHandler = HandlerManager.GetDynamicHandler<UIUXHandler>();
 
             UIUXHandler.IUnitStatUIUXManager = this;
         }

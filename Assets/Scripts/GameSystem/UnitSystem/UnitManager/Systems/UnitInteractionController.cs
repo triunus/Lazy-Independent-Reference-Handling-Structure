@@ -37,7 +37,7 @@ namespace GameSystem.UnitSystem.UnitManager
         private void OnMouseUp()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UIUXHandler = HandlerManager.GetDynamicDataHandler<UIUXSystem.UIUXHandler>();
+            var UIUXHandler = HandlerManager.GetDynamicHandler<UIUXSystem.UIUXHandler>();
 
             // Unit 등록 작업.
             UIUXSystem.UnitInteractionUIUX.RegisterData registerData = new();

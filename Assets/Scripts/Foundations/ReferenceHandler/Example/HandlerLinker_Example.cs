@@ -26,8 +26,8 @@ namespace Foundations.ReferencesHandler
 
         private void GetHandler()
         {
-            this.LazyHandler_DataExample = this.LazyReferenceHandlerManager.GetStaticDataHandler<LazyHandler_DataExample>();
-            this.LazyHandler_DataGroupExample = this.LazyReferenceHandlerManager.GetStaticDataHandler<LazyHandler_DataGroupExample>();
+            this.LazyHandler_DataExample = this.LazyReferenceHandlerManager.GetStaticHandler<LazyHandler_DataExample>();
+            this.LazyHandler_DataGroupExample = this.LazyReferenceHandlerManager.GetStaticHandler<LazyHandler_DataGroupExample>();
         }
     }
 }

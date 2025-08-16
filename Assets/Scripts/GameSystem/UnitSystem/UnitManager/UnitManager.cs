@@ -31,7 +31,7 @@ namespace GameSystem.UnitSystem.UnitManager
         private void InitialSetting()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UnitManagerDbHandler = HandlerManager.GetDynamicDataHandler<UnitManagerDBHandler>();
+            var UnitManagerDbHandler = HandlerManager.GetDynamicHandler<UnitManagerDBHandler>();
 
             this.myUnitManagerData = new(this.gameObject.GetInstanceID());
             // 이후, 유닛 규격화가 완료되면, [SerializeField] 명시하고 있는 유닛 DB 부분을 Static Handler에서 가져오는 것으로 위임합니다.
@@ -48,9 +48,9 @@ namespace GameSystem.UnitSystem.UnitManager
         public IEnumerator AttackOperation(int targetUniquID, UnitType targetUnitType)
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UnitManagerDbHandler = HandlerManager.GetDynamicDataHandler<UnitManagerDBHandler>();
+            var UnitManagerDbHandler = HandlerManager.GetDynamicHandler<UnitManagerDBHandler>();
             var UnitCombatCalculator = HandlerManager.GetUtilityHandler<UnitCombatCalculator>();
-            var IUnitStatUIUXManager = HandlerManager.GetDynamicDataHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
+            var IUnitStatUIUXManager = HandlerManager.GetDynamicHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
 
             // targetID 와 대응되는 unitManagerData를 찾을 수 없으면 리턴.
             if (!UnitManagerDbHandler.TryGetUnitManagerData(targetUniquID, targetUnitType, out var unitManagerData)) yield break;
@@ -68,9 +68,9 @@ namespace GameSystem.UnitSystem.UnitManager
         public IEnumerator HealOperation(int targetUniquID, UnitType targetUnitType)
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UnitManagerDbHandler = HandlerManager.GetDynamicDataHandler<UnitManagerDBHandler>();
+            var UnitManagerDbHandler = HandlerManager.GetDynamicHandler<UnitManagerDBHandler>();
             var UnitCombatCalculator = HandlerManager.GetUtilityHandler<UnitCombatCalculator>();
-            var IUnitStatUIUXManager = HandlerManager.GetDynamicDataHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
+            var IUnitStatUIUXManager = HandlerManager.GetDynamicHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
 
             // targetID 와 대응되는 unitManagerData를 찾을 수 없으면 리턴.
             if (!UnitManagerDbHandler.TryGetUnitManagerData(targetUniquID, targetUnitType, out var unitManagerData)) yield break;
@@ -88,7 +88,7 @@ namespace GameSystem.UnitSystem.UnitManager
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
             var UnitCombatCalculator = HandlerManager.GetUtilityHandler<UnitCombatCalculator>();
-            var IUnitStatUIUXManager = HandlerManager.GetDynamicDataHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
+            var IUnitStatUIUXManager = HandlerManager.GetDynamicHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
 
             // 피격 측 Damage량 계산
             float calculatedDamage = UnitCombatCalculator.CalculateFinalAttackPower(new DefenderAttackReceiveData(damage, this.myUnitData));
@@ -105,7 +105,7 @@ namespace GameSystem.UnitSystem.UnitManager
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
             var UnitCombatCalculator = HandlerManager.GetUtilityHandler<UnitCombatCalculator>();
-            var IUnitStatUIUXManager = HandlerManager.GetDynamicDataHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
+            var IUnitStatUIUXManager = HandlerManager.GetDynamicHandler<UIUXSystem.UIUXHandler>().IUnitStatUIUXManager;
 
             // 피격 측 Heal량 계산
             float calculatedHealAmount = UnitCombatCalculator.CalculateFinalHealPower(new DefenderHealReceiveData(healAmount, this.myUnitData));

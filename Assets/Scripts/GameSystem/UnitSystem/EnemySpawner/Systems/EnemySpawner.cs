@@ -22,10 +22,10 @@ namespace GameSystem.UnitSystem.EnemySpawner
         private void Awake()
         {
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            this.EnemySpawnDBHandler = HandlerManager.GetStaticDataHandler<EnemySpawnDBHandler>();
-            this.EnemyUnitDBHandler = HandlerManager.GetStaticDataHandler<EnemyUnitDBHandler>();
+            this.EnemySpawnDBHandler = HandlerManager.GetStaticHandler<EnemySpawnDBHandler>();
+            this.EnemyUnitDBHandler = HandlerManager.GetStaticHandler<EnemyUnitDBHandler>();
 
-            HandlerManager.GetDynamicDataHandler<UnitSystemHandler>().IEnemySpawner = this;
+            HandlerManager.GetDynamicHandler<UnitSystemHandler>().IEnemySpawner = this;
         }
 
         // 유닛 생성 작업.

@@ -141,10 +141,10 @@ MonoBehaviour:
     HP: 20
     BaseAttackPower: 5
     AttackPowerModifier: 0.5
-    AttackPowerTakenModifier: -0.1
-    BaseHealPower: 2
-    HealPowerModifier: 0.6
-    HealPowerTakenModifier: 0.2
+    AttackPowerTakenModifier: -0.25
+    BaseHealPower: 3
+    HealPowerModifier: 0.5
+    HealPowerTakenModifier: 0.5
 --- !u!114 &167962213933473015
 MonoBehaviour:
   m_ObjectHideFlags: 0

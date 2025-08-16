@@ -102,13 +102,13 @@ namespace GameSystem.UnitSystem.UnitManager
         public int UnitID;
         public UnitType UnitType;
 
-        public int HP;
+        public float HP;
 
-        public int BaseAttackPower;
+        public float BaseAttackPower;
         public float AttackPowerModifier;
         public float AttackPowerTakenModifier;
 
-        public int BaseHealPower;
+        public float BaseHealPower;
         public float HealPowerModifier;
         public float HealPowerTakenModifier;
     }

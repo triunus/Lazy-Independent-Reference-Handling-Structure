@@ -29,7 +29,7 @@ namespace GameSystem.UIUXSystem.UnitInteractionUIUX
             this.myUnitInteractionUIUXData = new();
 
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UIUXHandler = HandlerManager.GetDynamicDataHandler<UIUXHandler>();
+            var UIUXHandler = HandlerManager.GetDynamicHandler<UIUXHandler>();
             UIUXHandler.IUnitInteractionUIUXManager = this;
 
             this.UnitInteractionUIUX_Content.InitialSetting(this.myUnitInteractionUIUXData);
@@ -53,7 +53,7 @@ namespace GameSystem.UIUXSystem.UnitInteractionUIUX
             this.myUnitInteractionUIUXData.IsAnimationActivated = true;
 
             var HandlerManager = LazyReferenceHandlerManager.Instance;
-            var UnitManagerDbHandler = HandlerManager.GetDynamicDataHandler<UnitSystem.UnitManager.UnitManagerDBHandler>();
+            var UnitManagerDbHandler = HandlerManager.GetDynamicHandler<UnitSystem.UnitManager.UnitManagerDBHandler>();
 
             // 가격자 유닛의 기능을 참조하기 위해, '가격자 유닛들이 담긴 Dynamic Handler'를 참조 및 Get.
             if (!UnitManagerDbHandler.TryGetUnitManagerData(

@@ -10,7 +10,7 @@ public class SelectActionTypeView : MonoBehaviour
     public void SelectAttack()
     {
         var HandlerManager = LazyReferenceHandlerManager.Instance;
-        var IUnitInteractionUIUXManager = HandlerManager.GetDynamicDataHandler<UIUXHandler>().IUnitInteractionUIUXManager;
+        var IUnitInteractionUIUXManager = HandlerManager.GetDynamicHandler<UIUXHandler>().IUnitInteractionUIUXManager;
 
         IUnitInteractionUIUXManager.RegisterBehaviourData(BehaviourType.Attack);
     }
@@ -18,7 +18,7 @@ public class SelectActionTypeView : MonoBehaviour
     public void SelecteHeal()
     {
         var HandlerManager = LazyReferenceHandlerManager.Instance;
-        var IUnitInteractionUIUXManager = HandlerManager.GetDynamicDataHandler<UIUXHandler>().IUnitInteractionUIUXManager;
+        var IUnitInteractionUIUXManager = HandlerManager.GetDynamicHandler<UIUXHandler>().IUnitInteractionUIUXManager;
 
         IUnitInteractionUIUXManager.RegisterBehaviourData(BehaviourType.Heal);
     }
